@@ -1,5 +1,14 @@
 function iq = readBladeRF(filename)
 %READBLADERF Read a bladeRF SC16 Q11 binary capture file
+%
+%   iq = readBladeRF(filename)
+%
+%   Input:
+%       filename - path to the bladeRF binary capture file
+%
+%   Output:
+%       iq - complex column vector or normalized IQ samples
+
 
     % open the file for binary reading in little endian format.
     fileID = fopen(filename, "rb", "ieee-le");
